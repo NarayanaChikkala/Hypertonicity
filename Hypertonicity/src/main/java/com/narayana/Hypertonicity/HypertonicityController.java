@@ -17,10 +17,10 @@ public class HypertonicityController {
 	@Autowired
 	HypertoncityRepository hypertoncityRepository;
 	
-	@RequestMapping("/Hypertonicity/{serumOsmol}")
-	public String Hypertonicity(@PathVariable("serumOsmol") String serumOsmol) {
-		logger.info("accounts-changed byId() invoked: " + serumOsmol);
-		String retVal = hypertoncityRepository.gethypertonicity(serumOsmol);
+	@RequestMapping("/hypertonicity/{serumOsmol_hypertonicity}")
+	public String Hypertonicity(@PathVariable("serumOsmol_hypertonicity") String serumOsmol_hypertonicity) {
+		logger.info("accounts-changed byId() invoked: " + serumOsmol_hypertonicity);
+		String retVal = hypertoncityRepository.gethypertonicity(serumOsmol_hypertonicity);
 		logger.info("accounts-microservice byId() found: " + retVal);
 		return retVal;
 	}
